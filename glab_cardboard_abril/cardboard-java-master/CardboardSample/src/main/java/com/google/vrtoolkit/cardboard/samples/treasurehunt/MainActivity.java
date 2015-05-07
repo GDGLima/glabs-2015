@@ -343,6 +343,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
     headTransform.getHeadView(headView, 0);
 
+    //Log.v("CONSOLE","onNewFrame "+headView[0]+" "+headView[1]+" "+headView[2]);
+
     checkGLError("onReadyToDraw");
   }
 
@@ -444,10 +446,12 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
    * Called when the Cardboard trigger is pulled.
    */
   @Override
-  public void onCardboardTrigger() {
+  public void onCardboardTrigger()
+  {
     Log.i(TAG, "onCardboardTrigger");
 
-    if (isLookingAtObject()) {
+    if (isLookingAtObject())
+    {
       score++;
       overlayView.show3DToast("Found it! Look around for another one.\nScore = " + score);
       hideObject();
@@ -493,7 +497,8 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
    *
    * @return true if the user is looking at the object.
    */
-  private boolean isLookingAtObject() {
+  private boolean isLookingAtObject()
+  {
     float[] initVec = { 0, 0, 0, 1.0f };
     float[] objPositionVec = new float[4];
 
