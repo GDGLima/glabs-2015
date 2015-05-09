@@ -106,7 +106,6 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
   private Vibrator vibrator;
   private CardboardOverlayView overlayView;
-  private Cube mCube;
 
   /**
    * Converts a raw text file, saved as a resource, into an OpenGL ES shader.
