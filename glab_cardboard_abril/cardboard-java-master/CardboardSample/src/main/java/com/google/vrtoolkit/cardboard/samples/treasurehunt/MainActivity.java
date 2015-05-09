@@ -21,6 +21,7 @@ import com.google.vrtoolkit.cardboard.CardboardView;
 import com.google.vrtoolkit.cardboard.Eye;
 import com.google.vrtoolkit.cardboard.HeadTransform;
 import com.google.vrtoolkit.cardboard.Viewport;
+import com.jayway.opengles20.mesh.Cube;
 
 import android.content.Context;
 import android.opengl.GLES20;
@@ -38,6 +39,7 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 
 import javax.microedition.khronos.egl.EGLConfig;
+
 
 /**
  * A Cardboard sample application.
@@ -104,6 +106,7 @@ public class MainActivity extends CardboardActivity implements CardboardView.Ste
 
   private Vibrator vibrator;
   private CardboardOverlayView overlayView;
+  private Cube mCube;
 
   /**
    * Converts a raw text file, saved as a resource, into an OpenGL ES shader.
